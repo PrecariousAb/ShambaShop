@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Welcome message -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Shamba Shop!"
+            android:textSize="24sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons for various actions -->
+        <Button
+            android:id="@+id/listProductsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List New Products"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/browsePurchaseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Browse Products"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/viewCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Cart"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/viewOrderHistoryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Order History"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/viewReportsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Reports"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
