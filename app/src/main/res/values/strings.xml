@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">ShambaShop</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="login_button_text">Login</string>
+    <string name="register_text">Don\'t have an account? Register</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="phone_hint">Enter your phone number</string>
+    <string name="confirm_password_hint">Confirm your password</string>
+    <string name="register_button_text">Register</string>
+    <string name="login_text">Already have an account? Login</string>
+    <string name="logo_description">Shamba Shop Logo</string>
+    <string name="consumer">Consumer</string>
+    <string name="farmer">Farmer</string>
 </resources>
