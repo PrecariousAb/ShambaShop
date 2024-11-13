@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nameEditText" type="id" />
+    <item name="farmerRadioButton" type="id" />
+    <item name="userTypeRadioGroup" type="id" />
+    <item name="consumerRadioButton" type="id" />
+    <item name="phoneEditText" type="id" />
+    <item name="confirmPasswordEditText" type="id" />
+    <item name="registerButton" type="id" />
+    <item name="loginTextView" type="id" />
+</resources>
