@@ -1,18 +1,13 @@
 {
-  "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
-  },
-
   "project_info": {
-    "project_number": "459770020072",
-    "project_id": "shambashop-f8d2c",
-    "storage_bucket": "shambashop-f8d2c.firebasestorage.app"
+    "project_number": "212788510228",
+    "project_id": "shambashop-3e880",
+    "storage_bucket": "shambashop-3e880.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:459770020072:android:7fbe99ce69a508f56e095d",
+        "mobilesdk_app_id": "1:212788510228:android:e042e9fed62b66c7873101",
         "android_client_info": {
           "package_name": "com.example.shambashop"
         }
@@ -20,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCZS0c13IO9MgC6tncBK2aAmRlGPmCvmTA"
+          "current_key": "AIzaSyCYAMhyeI3CLwEWlq898J5Di2nc3844X_4"
         }
       ],
       "services": {
@@ -31,5 +26,4 @@
     }
   ],
   "configuration_version": "1"
-
 }
