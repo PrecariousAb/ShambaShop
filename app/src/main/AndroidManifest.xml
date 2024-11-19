@@ -13,48 +13,62 @@
         android:theme="@style/Theme.ShambaShop"
         tools:targetApi="31">
 
-        <!-- Launch Activity -->
+        <!-- Login Activity (no history so it won't stay in the back stack) -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Other Activities -->
+        <!-- Registration Activity -->
         <activity
             android:name=".RegistrationActivity"
             android:exported="true" />
+
+        <!-- Customer Dashboard Activity -->
         <activity
-            android:name=".DashboardActivity"
-            android:exported="true" />
+            android:name=".CustomerDashboardActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+
+        <!-- Farmer Dashboard Activity -->
+        <activity
+            android:name=".FarmerDashboardActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+
+        <!-- Product Listing Activity -->
         <activity
             android:name=".ProductListingActivity"
             android:exported="false" />
+
+        <!-- Cart Activity -->
         <activity
             android:name=".CartActivity"
             android:exported="false" />
+
+        <!-- Reports Activity -->
         <activity
             android:name=".ReportsActivity"
             android:exported="false" />
+
+        <!-- Order History Activity -->
         <activity
             android:name=".OrderHistoryActivity"
             android:exported="false" />
+
+        <!-- Browse Purchase Activity -->
         <activity
             android:name=".BrowsePurchaseActivity"
             android:exported="false" />
+
+        <!-- Checkout Activity -->
         <activity
             android:name=".CheckoutActivity"
-            android:exported="false" />
-
-        <!-- Legacy MainActivity (if used elsewhere) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity2"
             android:exported="false" />
 
     </application>

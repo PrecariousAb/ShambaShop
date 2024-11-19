@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_dashboard"
     android:padding="16dp">
 
     <LinearLayout
@@ -15,8 +16,9 @@
             android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to Shamba Shop!"
+            android:text="Welcome!"
             android:textSize="24sp"
+            android:textColor="@color/dark_green"
             android:layout_marginBottom="24dp" />
 
         <!-- Buttons for various actions -->
@@ -25,42 +27,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="List New Products"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_dashboard"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/browsePurchaseButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Browse Products"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_dashboard"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/viewCartButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Cart"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_dashboard"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/checkoutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Checkout"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_dashboard"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/viewOrderHistoryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Order History"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_dashboard"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/viewReportsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Reports"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_dashboard"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 </ScrollView>
+
+

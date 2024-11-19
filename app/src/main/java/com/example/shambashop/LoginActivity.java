@@ -13,6 +13,11 @@ import android.widget.Toast;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView registerTextView;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    private DatabaseReference usersRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        usersRef = database.getReference("users");
 
         loginButton.setOnClickListener(v -> {
             String email = emailEditText.getText().toString().trim();
@@ -54,8 +62,33 @@ public class LoginActivity extends AppCompatActivity {
 
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-                                finish();
+                                if (user != null) {
+                                    String userId = user.getUid();
+
+                                    // Fetch the user data from Firebase
+                                    usersRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            if (dataSnapshot.exists()) {
+                                                User loggedInUser = dataSnapshot.getValue(User.class);
+                                                if (loggedInUser != null) {
+                                                    // Determine the user type and redirect accordingly
+                                                    if ("consumer".equals(loggedInUser.getUserType())) {
+                                                        startActivity(new Intent(LoginActivity.this, CustomerDashboardActivity.class));
+                                                    } else if ("farmer".equals(loggedInUser.getUserType())) {
+                                                        startActivity(new Intent(LoginActivity.this, FarmerDashboardActivity.class));
+                                                    }
+                                                    finish();
+                                                }
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                            Toast.makeText(LoginActivity.this, "Failed to load user data.", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
                             } else {
                                 Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                             }

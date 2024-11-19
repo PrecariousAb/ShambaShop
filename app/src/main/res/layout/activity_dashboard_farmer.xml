@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_farmer"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome, Farmer!"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/listProductsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background_farmer"
+            android:text="List New Products"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/viewReportsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background_farmer"
+            android:text="View Reports"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>
